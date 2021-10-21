@@ -1,0 +1,30 @@
+/* in the root we can specify variables */
+:root{
+    --board_size: 600px;
+}
+
+/* this is the design of the chess board, note the variables for width and height */
+#Chess_board {
+    display: grid;
+    width: var(--board_size);
+    height: var(--board_size);
+    background-color: goldenrod;
+    border: 10px solid black;
+}
+
+/* design for the odd square, note the calculation of its width and height */
+.odd_square{
+    display: table-cell;
+    background-color: lightgrey;
+    width: calc(var(--board_size) / 8) ;
+    height: calc(var(--board_size) / 8) ;
+}
+
+/* design for the even square, note the calculation of its width and height */
+.even_square{
+    display: table-cell;
+    background-color: black;
+    width: calc(var(--board_size) / 8) ;
+    height: calc(var(--board_size) / 8) ;
+    color: white;
+}
