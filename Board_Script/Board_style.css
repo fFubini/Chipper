@@ -6,6 +6,7 @@
 /* this is the design of the chess board, note the variables for width and height */
 #Chess_board {
     display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
     width: var(--board_size);
     height: var(--board_size);
     background-color: goldenrod;
@@ -13,7 +14,7 @@
 }
 
 /* design for the odd square, note the calculation of its width and height */
-.odd_square{
+.white{
     display: table-cell;
     background-color: lightgrey;
     width: calc(var(--board_size) / 8) ;
@@ -21,7 +22,7 @@
 }
 
 /* design for the even square, note the calculation of its width and height */
-.even_square{
+.black{
     display: table-cell;
     background-color: black;
     width: calc(var(--board_size) / 8) ;
