@@ -30,7 +30,6 @@
     background-color: #1266a6;
     width: calc(var(--board_size) / 8) ;
     height: calc(var(--board_size) / 8) ;
-    color: white;
     text-align: center;
     vertical-align: middle;
     line-height: calc(var(--board_size) / 8);
