@@ -1,8 +1,8 @@
 let chess_board = document.getElementById('Chess_board') ;//obtain chess_board element
 //console.log(chess_board) // seems okay
 
-let sq_type = ['white', 'black'];
-let sq_ids = 0; //initiate variable starting at 0 and adding up after every loop
+let sq_type = ['white', 'black']; 
+let sq_ids = 0; //initiate variable starting at 0 and counting up after every loop with increment of 1
 
 for (let row = 0; row < 8; row++) {
     for (let col = 0; col < 8; col++) {
