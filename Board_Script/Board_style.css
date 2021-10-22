@@ -1,6 +1,6 @@
 /* in the root we can specify variables */
 :root{
-    --board_size: 500px;
+    --board_size: 600px;
 }
 
 /* this is the design of the chess board, note the variables for width and height */
