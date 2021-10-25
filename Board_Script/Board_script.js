@@ -27,11 +27,11 @@ function SetToImg(varString) {
 
 //we can apply it over list below
 let Pieces = ['Rook_B', 'Knight_B', 'Bishop_B', 'Queen_B', 'King_B', 'Pawn_B', 'Rook_W', 'Knight_W', 'Bishop_W', 'Queen_W', 'King_W', 'Pawn_W']
-SetToImg(Pieces[0])
 for(let piece = 0; piece < Pieces.length; piece++){
     let Piece = Pieces[piece]
     SetToImg(Piece)
 }
+
 console.log(Rook_B) //this works
 
 //but for some reason this returns empty list
@@ -41,7 +41,7 @@ let ChessPieces = document.querySelectorAll('img');
 Rook_B.className = "Piece_B"
 Rook_B.src = "../Pieces_Imgs/Rook.svg" 
 squares[0].appendChild(Rook_B)*/
-/*
+
 //SO I did everything like this, but it does not quite work. It only displays One piece of each type for both Black and White
 
 Rook_B.className = "Piece_B"
@@ -105,4 +105,3 @@ squares[60].appendChild(King_W)
 squares[61].appendChild(Bishop_W)
 squares[62].appendChild(Knight_W)
 squares[63].appendChild(Rook_W)
-*/
