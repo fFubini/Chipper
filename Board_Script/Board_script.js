@@ -19,27 +19,30 @@ for (let row = 0; row < 8; row++) { //looping over every row and column so that 
 
 let squares = document.querySelectorAll('*[id^="sq"]'); //save all squares in a single html collection
 
-//this for loop tried to make every string element in Pieces a variable to assign new Image() to. it didnt work
-/*let Pieces = ['Rook_B', 'Knight_B', 'Bishop_B', 'Queen_B', 'King_B', 'Pawn_B', 'Rook_W', 'Knight_W', 'Bishop_W', 'Queen_W', 'King_W', 'Pawn_W']
-for(let piece = 0; piece < (Pieces.length/2); piece++){
-    let Piece = eval(Pieces[piece]) = new Image()
-    Piece.className = "Piece_B"
-}*/
+//this function takes a string and makes it an image
+function SetToImg(varString) {
+    let newValue = 'new Image()';
+    eval(varString + " = " + newValue);
+  }
 
+//we can apply it over list below
+let Pieces = ['Rook_B', 'Knight_B', 'Bishop_B', 'Queen_B', 'King_B', 'Pawn_B', 'Rook_W', 'Knight_W', 'Bishop_W', 'Queen_W', 'King_W', 'Pawn_W']
+SetToImg(Pieces[0])
+for(let piece = 0; piece < Pieces.length; piece++){
+    let Piece = Pieces[piece]
+    SetToImg(Piece)
+}
+console.log(Rook_B) //this works
 
+//but for some reason this returns empty list
+let ChessPieces = document.querySelectorAll('img'); 
+
+/*
+Rook_B.className = "Piece_B"
+Rook_B.src = "../Pieces_Imgs/Rook.svg" 
+squares[0].appendChild(Rook_B)*/
+/*
 //SO I did everything like this, but it does not quite work. It only displays One piece of each type for both Black and White
-let Rook_B = new Image()
-let Knight_B = new Image()
-let Bishop_B = new Image()
-let Queen_B = new Image()
-let King_B = new Image()
-let Pawn_B = new Image()
-let Rook_W = new Image()
-let Knight_W = new Image()
-let Bishop_W = new Image()
-let Queen_W = new Image()
-let King_W = new Image()
-let Pawn_W = new Image()
 
 Rook_B.className = "Piece_B"
 Knight_B.className = "Piece_B" 
@@ -102,3 +105,4 @@ squares[60].appendChild(King_W)
 squares[61].appendChild(Bishop_W)
 squares[62].appendChild(Knight_W)
 squares[63].appendChild(Rook_W)
+*/
