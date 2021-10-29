@@ -35,7 +35,16 @@
     line-height: calc(var(--board_size) / 8);
 }
 
-.Piece{
+/*https://codepen.io/sosuke/pen/Pjoqqp this site translates hex colours to argument in 'filter' which changes colours of svg files*/
+.Piece_W{
     height: calc(var(--board_size) / 10) ;
     width: calc(var(--board_size) / 10) ;
+    filter: invert(87%) sepia(11%) saturate(3955%) hue-rotate(322deg) brightness(84%) contrast(98%); /*this is brownish*/
 }
+
+.Piece_B{ 
+    height: calc(var(--board_size) / 10) ;
+    width: calc(var(--board_size) / 10) ;
+    filter: invert(0%) sepia(90%) saturate(7500%) hue-rotate(104deg) brightness(110%) contrast(110%);/*this is brownish*/
+}
+

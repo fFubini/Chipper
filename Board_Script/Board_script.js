@@ -30,11 +30,14 @@ for (let row = 0; row < 8; row++) { //looping over every row and column so that 
 let pieces = {
     bQR : {
         square : 'a8',
-        fig : "../Pieces_Imgs/Rook_B.svg"
+        fig : "../Pieces_Imgs/Rook_B.svg",
+        class: "Piece_W"
+
     },
     bQKt : {
         square : 'b8',
-        fig : "../Pieces_Imgs/Knight_B.svg"
+        fig : "../Pieces_Imgs/Knight_B.svg",
+        class: "Piece_B"
     }
 };
 
@@ -42,7 +45,7 @@ let pieces = {
 for (let p in pieces) {
     let sq = document.getElementById(pieces[p].square);
     let piece_img = document.createElement('img');
-    piece_img.className = "Piece"
+    piece_img.className = pieces[p].class;
     piece_img.src = pieces[p].fig;
     sq.appendChild(piece_img);
 };
